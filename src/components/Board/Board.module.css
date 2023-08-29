@@ -1,0 +1,56 @@
+.board {
+  width: 100%;
+  height: 290px;
+  display: flex;
+  padding-top: 0.25rem;
+  padding-bottom: 3rem;
+  padding-inline: 0.25rem;
+  flex-direction: row;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url('../../assets/images/board-layer-black-small.svg');
+  z-index: 20;
+}
+
+.board::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url('../../assets/images/board-layer-white-small.svg');
+  z-index: -1;
+  pointer-events: none;
+}
+
+.boardRow {
+  flex: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: -1;
+}
+
+.boardRow:hover {
+  /*background-color: lightblue; */
+  cursor: pointer;
+}
+
+.boardCell {
+  /* background-color: red; */
+  flex: 1;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.boardCellRed {
+  background-image: url('../../assets/images/counter-red-small.svg');
+}
+.boardCellYellow {
+  background-image: url('../../assets/images/counter-yellow-small.svg');
+}
